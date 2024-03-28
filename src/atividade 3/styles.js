@@ -13,19 +13,39 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
     },
+    titulo_numero: {
+        flexDirection: 'row',
+        fontSize: 35,
+        
+        width: '100px',
+        backgroundColor: '#303030',
+        borderRadius: 5,
+        textAlign: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'white',
+        borderWidth: 2,
+        borderColor: '#010101'
+    },
     botao: {
-        width: '70%',
+        width: '80%',
         padding: 10,
         margin: 20,
         backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 50
+        borderRadius: 50,
+        borderWidth: 2,
+        borderColor: '#a0a0a0'
     },
     txtBotao: {
         fontSize: 25,
         fontWeight: 'bold',
-        color: '#fafafa'
+        color: '#fafafa',
+    },
+    txtBotao_op: {
+        fontSize: 28,
+        
     },
     box: {
         width:'300px',
@@ -33,23 +53,28 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'center',
         backgroundColor:'grey',
-        padding: 5
+        padding: 5,
+        borderWidth: 3,
+        borderColor: '#000',
+        marginTop: 20
     },
     botao_operacao: {
         width: '50px',
         padding: 10,
-        margin: 20,
+       
         backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 5,
+        borderWidth: 2,
+        borderColor: '#a0a0a0',
         
     },
     operacao:{
-        width:'100%',
+        width:'80%',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-between'
     }
 })
 

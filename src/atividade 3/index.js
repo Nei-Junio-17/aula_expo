@@ -33,13 +33,13 @@ export default function Atividade3() {
             
                 <View style={styles.operacao}>
                     <TouchableOpacity style={styles.botao_operacao} onPress={() => decrementar()}>
-                        <Text style={styles.txtBotao}>-</Text>
+                        <Text style={[styles.txtBotao, styles.txtBotao_op]}>-</Text>
                     </TouchableOpacity>
 
-                    <Text style={styles.titulo}>{numero}</Text>
+                    <Text style={[styles.titulo, styles.titulo_numero]}>{numero}</Text>
 
                     <TouchableOpacity style={styles.botao_operacao} onPress={() => incrementar()}>
-                        <Text style={styles.txtBotao}>+</Text>
+                        <Text style={[styles.txtBotao, styles.txtBotao_op]}>+</Text>
                     </TouchableOpacity>
                 </View>
 
