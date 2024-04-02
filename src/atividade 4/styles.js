@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     txtBotao:{
-        color: '#ffcdd2',
+        color:'#ffcdd2',
         fontSize: 20,
     },
     txtBotaoPress:{

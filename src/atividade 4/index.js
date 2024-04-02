@@ -35,7 +35,7 @@ export default function Exemplo4() {
             />
 
             <Pressable style={({ pressed }) => pressed ? [styles.botao, styles.botaoPress] : styles.botao}>
-                <Text sytle={styles.txtBotao}>Exibir texto</Text>
+                <Text style={styles.txtBotao}>Exibir texto</Text>
             </Pressable>
         </View>
     );
