@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         padding: 8
     },
     titulo: {
-        fontSize: 30,
+        fontSize: 35,
         fontWeight: 'bold',
         color: '#b71c1c',
         margin: 20,
@@ -19,7 +19,19 @@ const styles = StyleSheet.create({
         fontSize: 25,
         marginVertical: 10,
         padding: 5,
-        color: '#b71c1c'
+        color: '#b71c1c',
+        fontWeight: 'bold',
+        marginBottom: 35
+    },
+    titleinput:{
+        fontSize: 20,
+        marginVertical: 10,
+        padding: 5,
+        color: '#b71c1c',
+        fontWeight: 'bold',
+        marginBottom: 0,
+        width: '80%'
+
     },
     input:{
         fontSize: 25,
@@ -28,7 +40,8 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         borderColor: '#b71c1c',
         borderRadius: 20,
-        padding: 5
+        padding: 5,
+        color: '#b71c1c'
     },
     linha:{
         borderBottomWidth: 3,

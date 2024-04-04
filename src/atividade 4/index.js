@@ -7,10 +7,11 @@ export default function Atividade4() {
 
     const [nome, setNome] = useState('');
     const [sobrenome, setSobrenome] = useState('');
-    const [txtTela, setTxtTela] = useState('');
+    const [txtTela, setTxtTela] = useState('Insira o nome e sobrenome');
 
     function exibeTextoHandle() {
-        setTxtTela(nome+''+sobrenome);
+        //setTxtTela(nome+' '+sobrenome);
+        setTxtTela(`${nome} ${sobrenome}`);
         setNome('');
         setSobrenome('');
     }
@@ -21,14 +22,14 @@ export default function Atividade4() {
 
             <Text style={styles.texto}>{txtTela}</Text>
 
-            <Text style={styles.texto}>Nome</Text>
+            <Text style={styles.titleinput}>Nome</Text>
 
             <TextInput
                 style={styles.input}
                 onChangeText={(valor) => setNome(valor)}
                 value={nome} />
 
-            <Text style={styles.texto}>Sobrenome</Text>
+            <Text style={styles.titleinput}>Sobrenome</Text>
 
             <TextInput
                 style={styles.input}
