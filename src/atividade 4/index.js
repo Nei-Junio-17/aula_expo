@@ -1,44 +1,47 @@
-import { useState } from 'react';
 import { View, Text, TextInput, Pressable } from "react-native";
+import { useState } from "react";
 
-import styles from "../atividade 4/styles";
+import styles from "./styles";
 
-export default function Exemplo4() {
+export default function Atividade4() {
 
-    const [txtDigitado, settxtDigitado] = useState('Texto Digitado');
-    const [txt2, setTxt2] = useState('');
+    const [nome, setNome] = useState('');
+    const [sobrenome, setSobrenome] = useState('');
     const [txtTela, setTxtTela] = useState('');
 
-    function atualizaTextoHandle(txt) {
-        settxtDigitado(txt);
+    function exibeTextoHandle() {
+        setTxtTela(nome+''+sobrenome);
+        setNome('');
+        setSobrenome('');
     }
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 4</Text>
-
-            <Text style={styles.texto}>{txtDigitado}</Text>
-
-            <TextInput
-                style={styles.input}
-                onChangeText={(valor) => atualizaTextoHandle(valor)}
-            />
-
-            <View style={styles.linha} />
+            <Text style={styles.titulo}>Atividade 4</Text>
 
             <Text style={styles.texto}>{txtTela}</Text>
 
+            <Text style={styles.texto}>Nome</Text>
+
             <TextInput
                 style={styles.input}
-                onChangeText={(vlr) => setTxt2(vlr)}
-                value={txt2}
-            />
+                onChangeText={(valor) => setNome(valor)}
+                value={nome} />
 
-            <Pressable style={({ pressed }) => pressed ? [styles.botao, styles.botaoPress] : styles.botao}>
+            <Text style={styles.texto}>Sobrenome</Text>
+
+            <TextInput
+                style={styles.input}
+                onChangeText={(valor) => setSobrenome(valor)}
+                value={sobrenome} />
+
+
+            <Pressable
+                style={({ pressed }) => pressed ? [styles.botao, styles.botaoPress] : styles.botao}
+                onPress={() => exibeTextoHandle()}>
                 <Text style={styles.txtBotao}>Exibir texto</Text>
             </Pressable>
-        </View>
-    );
-}
 
-// Handle:  coloca no nome da função para indicar que ela foi criada no proprio arquivo, e não chamada de um outro arquivo
+        </View>
+    )
+}
