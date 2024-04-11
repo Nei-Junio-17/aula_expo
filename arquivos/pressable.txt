@@ -1,0 +1,3 @@
+<Pressable 
+                style={({ pressed }) => pressed ? [styles.botao, styles.botaoPress] : styles.botao}
+            >

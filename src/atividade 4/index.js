@@ -8,6 +8,8 @@ export default function Atividade4() {
     const [nome, setNome] = useState('');
     const [sobrenome, setSobrenome] = useState('');
     const [txtTela, setTxtTela] = useState('Insira o nome e sobrenome');
+    const [isFocusNome, setIsFocusNome] = useState(false);
+    const [isFocusSobrenome, setIsFocusSobrenome] = useState(false);
 
     function exibeTextoHandle() {
         //setTxtTela(nome+' '+sobrenome);
@@ -25,22 +27,60 @@ export default function Atividade4() {
             <Text style={styles.titleinput}>Nome</Text>
 
             <TextInput
-                style={styles.input}
+                style={
+                    isFocusNome ?
+                        [styles.input,
+                        {
+                            color: '#ffcdd2',
+                            backgroundColor: '#b71c1c',
+                            outline: 'none'
+                        }]
+                        :
+                        styles.input
+                }
                 onChangeText={(valor) => setNome(valor)}
-                value={nome} />
+                value={nome}
+                onFocus={() => setIsFocusNome(true)}
+                onBlur={() => setIsFocusNome(false)}
+            />
 
             <Text style={styles.titleinput}>Sobrenome</Text>
 
             <TextInput
-                style={styles.input}
+                style={
+                    isFocusSobrenome ?
+                        [styles.input,
+                        {
+                            color: '#ffcdd2',
+                            backgroundColor: '#b71c1c',
+                            outline: 'none'
+                        }]
+                        :
+                        styles.input
+                }
                 onChangeText={(valor) => setSobrenome(valor)}
-                value={sobrenome} />
+                value={sobrenome}
+                onFocus={() => setIsFocusSobrenome(true)}
+                onBlur={() => setIsFocusSobrenome(false)}
+            />
 
 
             <Pressable
                 style={({ pressed }) => pressed ? [styles.botao, styles.botaoPress] : styles.botao}
                 onPress={() => exibeTextoHandle()}>
-                <Text style={styles.txtBotao}>Exibir texto</Text>
+                {
+                    ({ pressed }) => (
+                        <Text 
+                            style={
+                                pressed ? 
+                                    [styles.txtBotao, 
+                                        { color: '#b71c1c' }] 
+                                    : 
+                                        styles.txtBotao
+                            }
+                >Exibir texto</Text>
+            )
+        }
             </Pressable>
 
         </View>
