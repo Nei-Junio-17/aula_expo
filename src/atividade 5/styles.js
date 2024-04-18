@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
-const styles=StyleSheet.create({
-    container:{
+const styles = StyleSheet.create({
+    container: {
         flex: 1,
         justifyContent: 'center',
         backgroundColor: '#ff80ab',
@@ -9,52 +9,63 @@ const styles=StyleSheet.create({
         width: '100%',
         borderRadius: 20
     },
-    titulo:{
+    titulo: {
         margin: 6,
         fontSize: 30,
         fontWeight: 'bold',
-        textAlign:'center',
+        textAlign: 'center',
         color: "#c51162",
     },
-    txtSaida:{
+    txtSaida: {
         margin: 6,
         fontSize: 22,
         fontWeight: 'bold',
         textAlign: 'center',
-        color:'#e91e63'
+        color: '#e91e63'
     },
-    txtEntrada:{
+    txtEntrada: {
         borderWidth: 4,
         textAlign: 'center',
         fontSize: 22,
-        borderColor: '#E19E63',
+        borderColor: '#E91E63',
         //height:50,
         color: '#e53935',
         borderRadius: 10,
         marginTop: 10,
-        padding:10
+        padding: 10
     },
-    button:{
+    button: {
         backgroundColor: '#e91e63',
         height: 60,
         justifyContent: 'center',
         borderRadius: 10,
-        marginTop: 20,
-        width: '100%'
+        width: '20%',
+
     },
-    buttonTouch:{
+    buttonlimpar: {
+        width: '100%',
+        marginTop: 15,
+    },
+    buttonTouch: {
         backgroundColor: '#c51162'
     },
-    textButton:{
+    textButton: {
         fontSize: 30,
         color: '#ff80ab',
         textAlign: 'center'
     },
-    textLabel:{
-        fontSize: 16,
+    textLabel: {
+        fontSize: 18,
         fontWeight: 'bold',
         color: '#c51162'
     },
+    operators: {
+        marginTop: 15,
+        width: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    }
 });
 
 export default styles;
