@@ -7,7 +7,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#ff80ab',
         padding: 8,
         width: '100%',
-        borderRadius: 20
+        borderRadius: 20,
+        gap: 15
+        
     },
     titulo: {
         margin: 6,
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
         color: '#c51162'
     },
     operators: {
-        marginTop: 15,
+        marginTop: 25,
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
