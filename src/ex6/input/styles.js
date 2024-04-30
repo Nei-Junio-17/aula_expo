@@ -6,9 +6,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         width: '50%',
         fontSize: 50,
-        //marginTop:24,
-        color: 'lightgrey'
-    }
+        color: '#eee',
+        backgroundColor:'#aaa',
+        borderRadius: 20,
+        margin: 5
+    },
+  
 });
 
 export default styles;

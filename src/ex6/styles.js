@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
         color: '#aaa',
 
     },
+    ladoALado:{
+        flexDirection: 'row',
+        marginVertical: 30
+    }
 });
 
 export default styles;
