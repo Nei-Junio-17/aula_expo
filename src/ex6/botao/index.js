@@ -1,7 +1,7 @@
 import { Pressable, Text } from 'react-native';
 import styles from './styles';
 
-export default function Botao({ children, calcular }) {
+export default function Botao({ children, calcular, analisar }) {
     return (
         <Pressable
             style={
@@ -10,7 +10,7 @@ export default function Botao({ children, calcular }) {
                 :
                     styles.botao
             }
-            onPress={()=> calcular()}
+            onPress={()=> [calcular(), analisar()] }
             >
             <Text style={styles.txtBotao}>{children}</Text>
         </Pressable>
