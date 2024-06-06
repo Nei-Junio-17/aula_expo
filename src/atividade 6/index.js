@@ -7,7 +7,7 @@ import Botao from './botao';
 
 import styles from './styles';
 
-export default function Exemplo6() {
+export default function Atividade6() {
 
     const [peso, setPeso] = useState(null);
     const [altura, setAltura] = useState(null);
@@ -21,16 +21,16 @@ export default function Exemplo6() {
         analiseImc(tmpImc);
     }
 
-    function analiseImc(tmpImc){
-        if (tmpImc < 18.5){
+    function analiseImc(imc){
+        if (imc < 18.5){
             setAnalise('Abaixo do peso');
-        } else if (tmpImc => 18.5 && tmpImc < 24.9){
+        } else if (imc >= 18.5 && imc < 24.9){
             setAnalise('Peso normal');
-        } else if (tmpImc => 25 && tmpImc < 29.9){
+        } else if (imc >= 25 && imc < 29.9){
             setAnalise('Sobrepeso');
-        } else if (tmpImc => 30 && tmpImc < 34.9){
+        } else if (imc >= 30 && imc < 34.9){
             setAnalise('Obesidade Grau 1');
-        } else if (tmpImc => 35 && tmpImc < 39.9){
+        } else if (imc >= 35 && imc < 39.9){
             setAnalise('Obesidade Grau 2');
         } else {
             setAnalise('Obesidade Grau 3');
@@ -47,7 +47,7 @@ export default function Exemplo6() {
 
             <Text style={styles.imc}>{isNaN(imc) ? mensErro : imc.toFixed(2)}</Text>
 
-            <Text style={styles.imc}>{analise}</Text>
+            <Text calcular={analiseImc} style={styles.imc}>{analise}</Text>
 
             <Botao calcular={calculaImc}>Calcular</Botao>
         </View>
