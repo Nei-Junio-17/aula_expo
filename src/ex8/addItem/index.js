@@ -4,7 +4,12 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 import styles from './styles';
 
-export default function AddItem({adicionar}) { 
+export default function AddItem({adicionar}) {
+
+    function AddItem(){
+        adicionar(novoItem);
+        setNovoItem('');
+    }
 
     const [novoItem, setNovoItem] = useState('');
 

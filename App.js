@@ -11,11 +11,13 @@ import { StyleSheet, View } from 'react-native';
 //import Atividade5 from './src/atividade 5';
 // import Atividade6 from './src/atividade 6';
 // import Exemplo7 from './src/ex7';
-import Exemplo8 from './src/ex8';
+// import Exemplo8 from './src/ex8';
+
+import NavegacaoStack from './src/navegacao/stack';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo8 />
+      <NavegacaoStack />
       <StatusBar style="auto" />
     </View>
   );
@@ -25,8 +27,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'grey',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     padding: 15,
   },
 });
